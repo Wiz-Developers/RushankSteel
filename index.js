@@ -16,6 +16,7 @@ $('.navTrigger').click(function() {
 
 });
 var donoteffect = iOS();
+console.log(donoteffect);
 
 function iOS() {
     return [
@@ -166,7 +167,7 @@ $(document).ready(function() {
 
 })(jQuery);
 
-if (donoteffect == "true") {
+if (!donoteffect) {
     var win = $(window);
 
     var allMods = $(".module");
