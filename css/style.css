@@ -367,6 +367,11 @@ body {
     .myP {
         padding: 2%;
     }
+
+    .nav {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 /*---------------Anout Us-------------*/
@@ -600,7 +605,7 @@ body {
 
 @media (max-width: 390px) {
     .caromain {
-        padding-top: 30%;
+        padding-top: 25%;
         background-color: #474a4f;
     }
 

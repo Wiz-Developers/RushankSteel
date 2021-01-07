@@ -15,7 +15,21 @@ $('.navTrigger').click(function() {
     }
 
 });
+var donoteffect = iOS();
 
+function iOS() {
+    return [
+            'iPad Simulator',
+            'iPhone Simulator',
+            'iPod Simulator',
+            'iPad',
+            'iPhone',
+            'iPod'
+        ].includes(navigator.platform)
+        // iPad on iOS 13 detection
+        ||
+        (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
 
 $(document).ready(function() {
     var itemsMainDiv = ('.MultiCarousel');
@@ -152,24 +166,26 @@ $(document).ready(function() {
 
 })(jQuery);
 
-var win = $(window);
+if (donoteffect == "true") {
+    var win = $(window);
 
-var allMods = $(".module");
-
-allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-        el.addClass("already-visible");
-    }
-});
-
-win.scroll(function(event) {
+    var allMods = $(".module");
 
     allMods.each(function(i, el) {
         var el = $(el);
         if (el.visible(true)) {
-            el.addClass("come-in");
+            el.addClass("already-visible");
         }
     });
 
-});
+    win.scroll(function(event) {
+
+        allMods.each(function(i, el) {
+            var el = $(el);
+            if (el.visible(true)) {
+                el.addClass("come-in");
+            }
+        });
+
+    });
+}
