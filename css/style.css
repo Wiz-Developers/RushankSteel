@@ -18,6 +18,12 @@ body {
     text-align: center;
 }
 
+@media screen (min-width: 768px) {
+    .nav {
+        height: 75px;
+    }
+}
+
 .nav div.logo {
     float: left;
     width: auto;
@@ -599,18 +605,31 @@ body {
 
     .nav {
         background-color: #474a4f;
-        height: 85px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .why-contact {
+        text-align: end;
+    }
+
+    .about-contact {
+        text-align: left;
     }
 }
 
 @media (max-width: 390px) {
     .caromain {
-        padding-top: 25%;
+        padding-top: 20%;
         background-color: #474a4f;
     }
 
     .res4 {
         padding-right: 0;
+    }
+
+    .nav {
+        line-height: 1.5;
     }
 }
 
