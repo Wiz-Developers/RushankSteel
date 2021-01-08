@@ -609,12 +609,12 @@ body {
         padding-bottom: 1%;
     }
 
-    .why-contact {
-        text-align: end;
+    .why-content {
+        text-align: center;
     }
 
-    .about-contact {
-        text-align: left;
+    .about-content {
+        text-align: center;
     }
 }
 
@@ -630,6 +630,10 @@ body {
 
     .nav {
         line-height: 1.5;
+    }
+
+    .block {
+        display: block;
     }
 }
 
