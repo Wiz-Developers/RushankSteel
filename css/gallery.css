@@ -4,6 +4,13 @@
     background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
 .img-fluid {
     width: 75%;
 }
